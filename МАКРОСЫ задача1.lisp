@@ -1,3 +1,4 @@
+;1. Определите макрос, который возвращает свой вызов.
 (defmacro self-call (&rest arg)
  `(quote (self-call, arg)))
 
