@@ -3,7 +3,7 @@
 ;когда, являющейся функциональным аргументом предикат "пред" истинен для всех элементов списка "список".
 
 (defun every-true (pred lst)
-	(null(mapcan(lambda (x)
+    (null(mapcan(lambda (x)
        (if (funcall pred x) nil (list T))) lst)
      )
 )
