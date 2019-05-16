@@ -1,12 +1,10 @@
 ;3. Определите лисповскую форму (IF условие p q) в виде макроса
 
-(defmacro if! (condition  &rest p)
-    (cons condition p )
+(defmacro if!(cond р q)
+    `(if ,cond ,р ,q)
 )
 
-;(print(if! evenp 5 ))
-;NIL
-;(print(if! numberp '(5 f 7)))
-;NIL
-;(print(if! atom 5 ))
-;T
+(setq x '(1 2 3))
+
+;(print (if! (list x) 'yes 'no))
+;YES
